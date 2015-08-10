@@ -11,9 +11,9 @@ void setup(){
 void draw(){
   background(0);
   counter++;
-  for (float x = 1; x < 100; x = x+0.2){
+  for (float x = 1; x < 50; x = x+0.2){
     imageMode(CENTER);
-    rotate(counter/mouseX/mouseX);
+    rotate(counter/mouseX/300);
     image(browserFour,width/2,height/2,width/x,height/x);
   }
 }
