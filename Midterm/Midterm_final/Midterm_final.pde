@@ -49,7 +49,7 @@ void draw(){
   float wavySin = sin(frameCount * speed);
   float wavyCos = cos(frameCount * speed);
   
-  if (millis()>28000){
+  if (millis()>32000){
     state=1;
   }
   if (state == 0){
