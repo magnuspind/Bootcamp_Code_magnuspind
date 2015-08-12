@@ -17,9 +17,9 @@ void setup(){
 void draw(){
   background(0);
   counter++;
-  if (counter > 100){
-    noLoop();
-  }
+//  if (counter > 100){
+//    noLoop();
+//  }
   for (int i = 0; i < circleX.length; i++){
     translate(displayWidth/2,displayHeight/2);
     rotate(counter/1000);
