@@ -18,7 +18,7 @@ int x;
 int state = 0;
 
 void setup(){
-  size(displayWidth,displayHeight);
+  size(displayWidth,displayHeight, P3D);
   minim = new Minim(this);                                //SONG DATA
   song = minim.loadFile("Internettet.mp3");
   
@@ -40,7 +40,6 @@ void draw(){
   for(int i = 0; i < song.bufferSize(); i++){              //SONG DATA
   songData = abs(song.mix.get(i));                         //SONG DATA 
   }
-  
   
   background(0);
   noStroke();
@@ -84,9 +83,3 @@ void draw(){
   }    
  }
 }
-
-
-
-
-
-
