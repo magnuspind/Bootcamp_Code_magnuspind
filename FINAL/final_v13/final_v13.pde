@@ -85,8 +85,8 @@ void draw(){
   }
   
   // CAMERA SETUP
-  counter = millis();
-  eyeZ = eyeZ+songData*150+millis();
+  counter = counter++;
+  eyeZ = eyeZ+songData*150+counter;
   camera(eyeX + -1*(mouseX - (displayWidth/2)), eyeY + -1*(mouseY - (displayHeight/2)), eyeZ, centerX, centerY, centerZ, upX, upY, upZ);
   
   //background(0);
@@ -182,36 +182,6 @@ void draw(){
   imageMode(CENTER);
   image(blackBgk, 0,0);
 
-  counter = 0;
-  x = 700;
-  y = -100;
-  z = 11600;
-  translate(x,y,z);
-//  rotate(up);
-  for(int i = 0; i < 10; i = i+40){
-   for(int j = 0; j < 10; j = j+40){
-   image(cursor4b,i+songData*30,j+songData*30,(28*1.7),(40*1.7));
-   }
-  }
-  
-  x = -750;
-  y = -500;
-  z = 11000;
-  translate(x,y,z);
-  for (float x = 1; x < 80; x = x+0.7){
-  imageMode(CENTER);
-  rotate(songData/100);
-  image(browserFive,width/2,height/2,width/x,height/x);
-  }
-
-  x =-750;
-  y =-800;
-  z = 11200;
-  translate(x,y,z);
- // rotate(rotate);
-  imageMode(CENTER);
-  image(blackBgk, 0,0);
-  
   //x = 0;
   //y = 0;
   //z = 3000;
